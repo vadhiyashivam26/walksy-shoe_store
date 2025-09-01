@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 # db = SQLAlchemy(app)
 db = SQLAlchemy()
-db.init_app()
+# db.init_app(app)
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
