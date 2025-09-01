@@ -43,23 +43,18 @@ Into Style{% endblock %} {% block content %}
       data-bs-slide-to="2"
       aria-label="Slide 3"
     ></button>
+    
     <button
       type="button"
       data-bs-target="#carouselExampleDark"
-      data-bs-slide-to="3"
+      data-bs-slide-to="4"
       aria-label="Slide 4"
     ></button>
     <button
       type="button"
       data-bs-target="#carouselExampleDark"
-      data-bs-slide-to="4"
-      aria-label="Slide 5"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleDark"
       data-bs-slide-to="5"
-      aria-label="Slide 6"
+      aria-label="Slide 5"
     ></button>
   </div>
 
@@ -89,7 +84,7 @@ Into Style{% endblock %} {% block content %}
 
     <div class="carousel-item" data-bs-interval="2000">
       <img
-        src="./static/slider_image/Nike Air Max_1.jpeg"
+        src="./static/slider_image/sneakerposter_7.jpeg"
         class="carousel-img d-block w-100 carousel_height"
         alt="Slide 3"
       />
@@ -100,7 +95,7 @@ Into Style{% endblock %} {% block content %}
 
     <div class="carousel-item" data-bs-interval="2000">
       <img
-        src="./static/slider_image/Nike Air Max_3.jpeg"
+        src="./static/slider_image/casual_5.jpeg"
         class="carousel-img d-block w-100 carousel_height"
         alt="Slide 4"
       />
@@ -111,20 +106,9 @@ Into Style{% endblock %} {% block content %}
 
     <div class="carousel-item" data-bs-interval="2000">
       <img
-        src="./static/slider_image/casual_5.jpeg"
-        class="carousel-img d-block w-100 carousel_height"
-        alt="Slide 5"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <a href="/home/category" class="btn">Shop Now</a>
-      </div>
-    </div>
-
-    <div class="carousel-item" data-bs-interval="2000">
-      <img
         src="./static/slider_image/casual_4.jpeg"
         class="carousel-img d-block w-100 carousel_height"
-        alt="Slide 6"
+        alt="Slide 5"
       />
       <div class="carousel-caption d-none d-md-block">
         <a href="/home/category" class="btn">Shop Now</a>
@@ -155,7 +139,7 @@ Into Style{% endblock %} {% block content %}
 </section>
 
 <!-- Featured Products -->
-<section class="featured" id="featured">
+<section class="featured container" id="featured">
   <div data-aos="fade-up" data-aos-duration="1000">
     <h2>Featured Products</h2>
     {% if products %}

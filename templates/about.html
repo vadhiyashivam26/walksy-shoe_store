@@ -1,7 +1,12 @@
 {% extends "./boilerplate/boilerplate.html" %} {% block title %}About Us -
 Walksy{% endblock %} {% block content %}
+<style>
+  .box{
+    min-height: 80vh !important;
+  }
+</style>
 <div class="container my-5">
-  <div class="row align-items-center">
+  <div class="row box align-items-center">
     <h2 class="text-center p-3">About Us</h2>
     <div class="col-md-6 mb-4 mb-md-0">
       <video autoplay muted loop playsinline class="w-100 rounded shadow">

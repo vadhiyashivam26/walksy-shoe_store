@@ -8,6 +8,12 @@
 body {
   background: #f9f9f9;
   color: #333;
+  min-height: 80vh;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */

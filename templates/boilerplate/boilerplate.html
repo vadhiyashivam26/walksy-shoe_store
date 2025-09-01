@@ -13,53 +13,86 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1; /* pushes footer to the bottom */
+      }
+    </style>
   </head>
-  <body>
+  <body id="main-body">
     {% include './includes/header.html'%}
-    {% with messages = get_flashed_messages(with_categories=true) %} 
-    {% if messages %} {% for category, message in messages %}
-    <div class="alert alert-{{ category }} alert-dismissible fade show col-4 offset-4 mt-2" role="alert">
-    {{ message }}
-    <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"></button>
-    </div>
-    {% endfor %} 
-    {% endif %} 
-    {% endwith %}
-    
-    {% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    <div class="modal fade" id="flashModal" tabindex="-1" aria-labelledby="flashModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-success text-white">
-          <div class="modal-header">
-            <h5 class="modal-title" id="flashModalLabel">Success</h5>
-          </div>
-          <div class="modal-body">
-            {% for category, message in messages %}
+
+    <main class="main">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <div
+        class="alert alert-{{ category }} alert-dismissible fade show col-4 offset-4 mt-2"
+        role="alert"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %} {% endif %} {% endwith %} {% with messages =
+      get_flashed_messages(with_categories=true) %} {% if messages %}
+      <div
+        class="modal fade"
+        id="flashModal"
+        tabindex="-1"
+        aria-labelledby="flashModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-success text-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flashModalLabel">Success</h5>
+            </div>
+            <div class="modal-body">
+              {% for category, message in messages %}
               <p>{{ message }}</p>
-            {% endfor %}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+              {% endfor %}
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <script>
-      var flashModal = new bootstrap.Modal(document.getElementById('flashModal'));
-      flashModal.show();
-    </script>
-  {% endif %}
-{% endwith %}
-
-    
-    {% block content %} {% endblock %} {% include './includes/footer.html' %}
+      <script>
+        var flashModal = new bootstrap.Modal(
+          document.getElementById("flashModal")
+        );
+        flashModal.show();
+      </script>
+      {% endif %} {% endwith %} {% block content %} {% endblock %}
+    </main>
+    {% include './includes/footer.html' %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
