@@ -68,6 +68,7 @@ def admin_required(f):
     return decorated_function
 
 #client routes
+@app.route('/')
 @app.route('/home')
 def home():
     product = Product.query.filter_by(description='Featured product').all()
