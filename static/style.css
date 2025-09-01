@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+}
+
+nav ul {
+  margin-top: 0.5rem;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  list-style: none !important;
+  gap: 1.5rem !important;
+}
+a{
+  text-decoration: none !important;
+}
+nav a {
+  color: #444;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  height: 400px;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem !important;
+  background-color: #111 !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  margin-top: 1rem !important;
+}
+
+/* Gender Categories */
+.gender-categories {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.gender-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gender-card {
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gender-card:hover {
+  transform: translateY(-5px);
+}
+
+.gender-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.gender-card.men {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?fit=crop&w=800&q=80');
+}
+
+.gender-card.women {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?fit=crop&w=800&q=80');
+}
+
+/* Categories */
+.categories {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+/* Products */
+.featured {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product-card h3{
+  font-size: 1.25rem;
+}
+
+.product-img {
+  background-color: #eee;
+  height: 150px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+/* Newsletter */
+.newsletter {
+  padding: 3rem 2rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.newsletter input {
+  padding: 0.5rem;
+  width: 250px;
+  margin-top: 1rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  background: #ffcc00;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #222;
+  color: white;
+}
+
+/* Gender Hero */
+.gender-hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.gender-hero.men {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?fit=crop&w=1600&q=80');
+}
+
+.gender-hero.women {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?fit=crop&w=1600&q=80');
+}
+
+.gender-hero h1 {
+  font-size: 3rem;
+}
+
+.gender-hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* Gender Products */
+.gender-products {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.gender-products .product-grid {
+  margin-top: 2rem;
+}
+
+/* members only page */
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  background-color: #ecf0f1;
+  margin: 8px 0;
+  padding: 10px;
+  border-left: 6px solid #27ae60;
+  border-radius: 4px;
+}
+

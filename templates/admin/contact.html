@@ -1,0 +1,35 @@
+{% extends "./boilerplate/boilerplate.html" %}
+{% block title %}Contact Queries - Admin{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Contact Queries</h2>
+  {% if messages %}
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped shadow-sm">
+      <thead class="table-dark text-center">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Subject</th>
+          <th>Submitted At</th>
+        </tr>
+      </thead>
+      <tbody class="text-center align-middle">
+        {% for msg in messages %}
+        <tr>
+          <td>{{ msg.name }}</td>
+          <td>{{ msg.email }}</td>
+          <td>{{ msg.message }}</td>
+          <td>{{ msg.submitted_at.strftime('%d-%m-%Y %H:%M') }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="text-center text-muted">No contact queries available.</p>
+  {% endif %}
+  <a href="{{ url_for('admin_dashboard') }}" class="btn btn-secondary ms-2">Go Back</a>
+</div>
+{% endblock %}

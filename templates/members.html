@@ -1,0 +1,44 @@
+{% extends "./boilerplate/boilerplate.html" %} 
+{% block title %}Walksy - Become a Member{% endblock %}
+
+{% block content %}
+
+<div class="form-container  ">
+  <h2 class="mb-4">Join Walksy Club</h2>
+<div class="benefits">
+  <form method="POST" action="/home/members" novalidate class="row g-3 needs-validation" >
+  <div class="col-md-12">
+    <label for="Username" class="form-label">Enter Username</label>
+    <input type="text" name="name" class="form-control " id="Username" required placeholder="Enter Username">
+    <div class="invalid-feedback">Enter Valid Username</div>
+  </div>
+
+  <div class="col-md-12">
+    <label for="Email" class="form-label">Enter Email</label>
+    <input type="email" name="email" class="form-control " id="Email" required placeholder="example@xyz.com">
+    <div class="invalid-feedback">Enter Valid Email</div>
+  </div>
+
+  <div class="col-md-12">
+    <label for="feedback" class="form-label">Write for Walksy</label>
+    <textarea type="text" name="desc" class="form-control" id="feedback" placeholder="Which product you like the most....." ></textarea>
+  </div>
+
+  <div class="col-4 mb-3" >
+    <button type="submit" onclick="alert('welcome to Walksy club ')" class="btn mb-2">Join us</button>
+  </div>
+</form>
+
+<h2>Membership Benefits</h2>
+    <ul>
+      <li>Early access to launches & special deals</li>
+      <li>Earn points on every purchase</li>
+      <li>Personalized style recommendations</li>
+      <li>VIP events & sneaker drops</li>
+      <li>Free shipping & returns</li>
+    </ul>
+  </div>
+</div>
+<script src="../static/script.js"></script>
+
+{% endblock %}

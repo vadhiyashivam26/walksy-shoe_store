@@ -1,0 +1,101 @@
+{% extends "./boilerplate/boilerplate.html" %} {% block title %}Walksy - Women's
+Shoes{% endblock %} {% block content %}
+
+<!-- Women's Hero -->
+<section class="gender-hero women">
+  <h1>Women's Collection</h1>
+  <p>Fashion meets comfort in every step</p>
+</section>
+
+<section class="py-5 bg-light text-center">
+  <h2 class="mb-4">Shop by Brand</h2>
+  <div class="container">
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class="col">
+        <a href="{{ url_for('women', brand='Adidas', category='female') }}" class="text-decoration-none text-dark">
+          <div class="bg-white shadow-sm py-3 rounded fw-semibold">Adidas</div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{{ url_for('women', brand='Nike', category='female') }}" class="text-decoration-none text-dark">
+          <div class="bg-white shadow-sm py-3 rounded fw-semibold">Nike</div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{{ url_for('women', brand='Puma', category='female') }}" class="text-decoration-none text-dark">
+          <div class="bg-white shadow-sm py-3 rounded fw-semibold">Puma</div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{{ url_for('women', brand='Skechers', category='female') }}" class="text-decoration-none text-dark">
+          <div class="bg-white shadow-sm py-3 rounded fw-semibold">Skechers</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="py-5" id="featured">
+  <div class="container">
+    <div data-aos="fade-up" data-aos-duration="500">
+      <h2 class="mb-4 text-center">Products</h2>
+
+      {% if products %}
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        {% for p in products %}
+        <div data-aos="fade-down">
+        <div class="col">
+          <a
+            href="{{ url_for('shoe_details', product_id=p.id) }}"
+            class="text-decoration-none text-dark"
+          >
+            <div class="card h-90 shadow-sm">
+              <div class="hover-zoom">
+                <img
+                  src="{{ url_for('static', filename=p.image_url or 'images/Nike_Air_Max_1.jpeg') }}"
+                  class="card-img-top product_img"
+                  alt="{{ p.name }}"
+                />
+              </div>
+              <div class="card-body shadow">
+                <h5 class="card-title">{{ p.name }}</h5>
+                <p class="card-text">Brand : {{ p.brand }}</p>
+                <p class="card-text">Size : {{ p.size }}</p>
+                <p class="card-text">&#8377; {{ p.price }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-center text-muted">
+        No products available in this category.
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hover-zoom img {
+    transition: transform 0.4s ease;
+  }
+
+  .card{
+    height: 400px;
+  }
+
+  .hover-zoom img:hover {
+    transform: scale(1.05);
+  }
+
+  .product_img {
+    height: 200px;
+    object-fit: cover;
+  }
+</style>
+
+{% endblock %}

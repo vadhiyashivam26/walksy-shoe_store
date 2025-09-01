@@ -1,0 +1,50 @@
+{% extends "./boilerplate/boilerplate.html" %} 
+{% block title %}Walksy - Login{% endblock %} 
+
+{% block content %}
+
+  <div class="form-container">
+    <h2 class="p-2">Login</h2>
+    <form
+      method="POST"
+      action="/login"
+      novalidate
+      class="row g-3 needs-validation p-3"
+    >
+      <div class="col-12">
+        <label for="Username" class="form-label">Enter Username</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          id="Username"
+          required
+          placeholder="Enter Username"
+        />
+        <div class="invalid-feedback">Enter Valid Username</div>
+      </div>
+
+      <div class="col-12">
+        <label for="Password" class="form-label">Enter Password</label>
+        <input
+          type="Password"
+          class="form-control"
+          id="Password"
+          name="password"
+          required
+          placeholder="xyz@123"
+        />
+        <div class="invalid-feedback">Enter Valid Password</div>
+      </div>
+
+      <div class="col-4">
+        <button type="submit" class="btn mb-2">Join us</button>
+      </div>
+      <div>Don't have an account, <a href="/signup">Signup</a></div>
+    </form>
+    <div>
+      <script src="../static/script.js"></script>
+    </div>
+</div>
+
+{% endblock %}

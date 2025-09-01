@@ -1,0 +1,56 @@
+{% extends './boilerplate/boilerplate.html' %}
+{% block title%}Walksy - Add shoes {% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+  <h2 class="mb-4 fw-bold">Add New Shoe</h2>
+
+  <form method="POST" enctype="multipart/form-data" class="shadow p-4 rounded bg-light">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input name="name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea name="description" class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Price (₹)</label>
+      <input name="price" type="number" step="1" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Brand</label>
+      <input name="brand" class="form-control" >
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <input name="category" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Size</label>
+      <input name="size" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Color</label>
+      <input name="color" class="form-control" >
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Image URL</label>
+      <input type="file" name="image_file" class="form-control" >
+    </div>
+
+    <button type="submit" class="btn btn-success">Add New Shoe</button>
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-secondary ms-2">Cancel</a>
+  </form>
+</div>
+
+
+{% endblock %}

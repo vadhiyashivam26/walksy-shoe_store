@@ -1,0 +1,98 @@
+{% extends "./boilerplate/boilerplate.html" %} {% block title %}Contact Us -
+Walksy{% endblock %} {% block content %}
+<section class="py-5">
+  <div class="container">
+    <h1 class="text-center mb-4 fw-bold">Get in Touch</h1>
+    <div class="row g-4">
+      <!-- Contact Form -->
+      <div class="col-md-7">
+        <form method="POST" action="/home/contact">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Your Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label fw-semibold">Describe Your Query</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="5"
+              name="message"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-warning px-4 fw-semibold">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-5">
+        <div class="p-4 bg-light rounded shadow-sm">
+          <h4 class="fw-bold mb-3">Contact Information</h4>
+          <p>
+            <i class="bi bi-geo-alt-fill me-2 text-warning"></i>
+            123 Walksy Street, New Delhi, India
+          </p>
+          <p>
+            <i class="bi bi-envelope-fill me-2 text-warning"></i>
+            tusharparmar@walksy.com <br>
+            &nbsp;&nbsp;shivamvadhiya@walksy.com
+          </p>
+          <p>
+            <i class="bi bi-telephone-fill me-2 text-warning"></i>
+                +91 97252 29236 <br>
+                &nbsp;&nbsp;+91 63555 40830
+          </p>
+          <div class="mt-4">
+            <h6 class="fw-bold">Follow Us:</h6>
+              <a
+                href=https://www.instagram.com/shivam_vadhiya_
+                target="_blank"
+                class="text-black me-3 fs-4"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.linkedin.com/in/ripal-pandya-a1513ba1"
+                target="_blank"
+                class="text-black me-3 fs-4"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://youtube.com/@avadhtutor?feature=shared"
+                target="_blank"
+                class="text-black fs-4"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

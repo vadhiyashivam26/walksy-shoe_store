@@ -1,0 +1,48 @@
+{% extends "./boilerplate/boilerplate.html" %}
+{% block title %}Walksy - Edit Shoe{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h2 class="mb-4 fw-bold">Edit Shoe</h2>
+
+  <form method="POST" class="shadow p-4 rounded bg-light">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input name="name" class="form-control" value="{{ shoe.name }}" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea name="description" class="form-control" rows="3">{{ shoe.description }}</textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Price (₹)</label>
+      <input name="price" type="number" step="1" class="form-control" value="{{ shoe.price }}" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Brand</label>
+      <input name="brand" class="form-control" value="{{ shoe.brand }}">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <input name="category" class="form-control" value="{{ shoe.category }}">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Size</label>
+      <input name="size" class="form-control" value="{{ shoe.size }}">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Color</label>
+      <input name="color" class="form-control" value="{{ shoe.color }}">
+    </div>
+
+    <button type="submit" class="btn btn-success">Update Shoe</button>
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-secondary ms-2">Cancel</a>
+  </form>
+</div>
+{% endblock %}

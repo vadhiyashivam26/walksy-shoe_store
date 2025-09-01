@@ -1,0 +1,26 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "cSpell.words": [
+        "Autoplaying",
+        "backref",
+        "chekout",
+        "dotenv",
+        "enctype",
+        "endfor",
+        "endwith",
+        "jsonify",
+        "mysqlconnector",
+        "nbsp",
+        "novalidate",
+        "onclick",
+        "shoebanner",
+        "shoesbanner",
+        "Signup",
+        "Skechers",
+        "sneakerposter",
+        "sneakersposter",
+        "stylesheet",
+        "supersecretkey",
+        "Walksy"
+    ]
+}
