@@ -102,5 +102,5 @@ Deploy! 🎉
 
 🧑‍💻 Author
 ---
-Shivam Vadhiya – Full Stack Developer
+Tushar Parmar – Full Stack Developer
 ---
